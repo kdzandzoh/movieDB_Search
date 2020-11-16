@@ -1,38 +1,198 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.moreInfo {
+  margin-top: 6px;
+  font-size: 20px;
+  border-radius: 1px;
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+  padding: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.Content {
+  background-color: #FFF;
+}
+
+.row {
+  animation-name: trial;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes trial {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.text {
+  line-height: 0.75cm;
+}
+
+.moreInfo:hover {
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  animation-name: animation1;
+  animation-duration: 1s;
+}
+
+@keyframes animation1 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(180deg);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.headerTitle {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerTitle h1{
+  display: flex;
+
+  animation-name: headerT;
+  animation-duration: 1s;
+  top: -1000px;
+  position: relative;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+.headerTitle img{
+  display: flex;
+
+  animation-name: imgT;
+  animation-duration: 1s;
+  animation-iteration-count: unset;
+  left: -1000px;
+  position: relative;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes headerT {
+  0% { top: -500px;}
+  100% { top: 0px;}
+}
+
+@keyframes imgT {
+  0% { left: -600px;}
+  100% { left: 0px;}
+} 
+
+.iconPic {
+  width: 100px;
+  padding: 10px;
+  animation-name: myIcon;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.btn-container {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.btn {
+  display: flex;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 5%;
+  background-color: white;
+  color: black;
+  border: 3px solid #4CAF50;
+}
+
+.btn:hover {
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-border {
+  background-color: #333;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:focus {
+  outline: 0;
 }
 
-@keyframes App-logo-spin {
+.input {
+  width: 50%;
+  padding: 10px 5px;
+  font-size: 18px;
+  margin: 15px auto;
+  top: 1000px;
+  display: block;
+  position: relative;
+  opacity: 1;
+  text-align: center;
+
+  animation-name: inputAnit;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.input:focus {
+  outline: 0;
+}
+
+
+@keyframes inputAnit {
+  0% {top: 100px; opacity: 0;}
+  100% {top: 0px; opacity: 1;}
+}
+
+
+.poster {
+  margin-left: 5px;
+  border-radius: 10%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  box-shadow: tomato;
+}
+
+.poster:hover {
+  animation-name: animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animation {
   from {
-    transform: rotate(0deg);
+    left: 0;
+    border-radius: 10%;
   }
   to {
-    transform: rotate(360deg);
+    left: 50%;
+    border-radius: 40%;
   }
+}
+
+.row {
+  border-bottom-style: inset;
+  display: block;
+}
+
+.row h3 {
+  font-size: 24px;
 }
