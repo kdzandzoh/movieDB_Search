@@ -1,3 +1,5 @@
+This web application powered by theMovieDB allows you to search for your favorite TV Shows and Movies!
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
