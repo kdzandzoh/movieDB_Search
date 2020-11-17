@@ -28,7 +28,7 @@ class App extends Component {
     }
 
     if (evt.target.value) {
-      let url = `https://api.themoviedb.org/3/search/${term}?api_key=85d3db72836e8f6a10edde7b4ae5b960&include_adult=true&query=${evt.target.value}`;
+      let url = `https://api.themoviedb.org/3/search/${term}?api_key=85d3db72836e8f6a10edde7b4ae5b960&query=${evt.target.value}`;
       fetch(url)
         .then(res => res.json())
         .then(json => this.setState({items: json.results}))
