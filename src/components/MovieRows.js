@@ -7,8 +7,34 @@ class MovieRows extends Component {
         this.props.btnMov ? term='movie' : term='tv';
         const link ='https://image.tmdb.org/t/p/w200';
         return (
-            this.props.items.map((item) => (
-                <table key={item.id} className="row">
+            <div className="parent">
+                {this.props.items.map((item) => (
+                        <div className="card-container">
+                            <div className="header-container">
+                                <h3>
+                                    {this.props.btnMov ? `${item.title}` : `${item.name}`}
+                                </h3>
+                            </div>
+                            <div className="image-container">
+                                <img className="poster" src={`${link}${item.poster_path}`} alt="poster"/>
+                            </div>
+                            <div className="text-container">
+                                <p>{item.overview}</p>
+                                <a href={`https://www.themoviedb.org/${term}/${item.id}`} target="_blank"><button className="moreInfo">More info</button></a>
+                            </div> 
+                        </div>
+                ))
+                }
+            </div>
+        );
+    }
+}
+
+export default MovieRows
+/*
+{`https://www.themoviedb.org/${term}/${item.id}`}
+
+    <table key={item.id} className="row">
                 <tbody>
                     <tr>
                         <td>
@@ -24,9 +50,4 @@ class MovieRows extends Component {
                     </tr>
                 </tbody>
             </table>    
-        ))
-        );
-    }
-}
-
-export default MovieRows
+*/
