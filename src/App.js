@@ -34,19 +34,19 @@ class App extends Component {
         .then(json => this.setState({items: json.results}))
         .catch(error => error);
     } 
-}
+  }
 
-//Toggle to Movie
-clickB1 = () => {
-  this.setState({btnMov: false});
-  this.setState({items: []});
-}
+  //Toggle to Movie
+  clickB1 = () => {
+    this.setState({btnMov: false});
+    this.setState({items: []});
+  }
 
-//Toggle to TV
-clickB2 = () => {
-  this.setState({btnMov: true});
-  this.setState({items: []});
-}
+  //Toggle to TV
+  clickB2 = () => {
+    this.setState({btnMov: true});
+    this.setState({items: []});
+  }
 
   render() {
     return (

@@ -24,8 +24,4 @@ class Buttons extends Component {
     }
 }
 
-const btnStyle = {
-    background: 'red',
-}
-
 export default Buttons

@@ -20,7 +20,7 @@ class MovieRows extends Component {
                             </div>
                             <div className="text-container">
                                 <p>{item.overview}</p>
-                                <a href={`https://www.themoviedb.org/${term}/${item.id}`} target="_blank"><button className="moreInfo">More info</button></a>
+                                <a href={`https://www.themoviedb.org/${term}/${item.id}`} target="_blank" rel="noreferrer"><button className="moreInfo">More info</button></a>
                             </div> 
                         </div>
                 ))
@@ -31,23 +31,3 @@ class MovieRows extends Component {
 }
 
 export default MovieRows
-/*
-{`https://www.themoviedb.org/${term}/${item.id}`}
-
-    <table key={item.id} className="row">
-                <tbody>
-                    <tr>
-                        <td>
-                            <img className="poster" src={`${link}${item.poster_path}`} alt="poster"/>
-                        </td>
-                        <td >
-                            <h3>
-                                {this.props.btnMov ? `${item.title}` : `${item.name}`}
-                            </h3>
-                            <p><span className="text">{item.overview}</span></p>
-                            <a href={`https://www.themoviedb.org/${term}/${item.id}`} target="_blank"><button className="moreInfo">More info</button></a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>    
-*/

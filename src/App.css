@@ -95,6 +95,9 @@
   background-color: white;
   color: black;
   border: 3px solid #4CAF50;
+
+  transition-property: background-color color;
+  transition-duration: 0.5s;
 }
 
 .btn:hover {
@@ -104,6 +107,7 @@
 }
 
 .btn:active {
+  transition: none;
   transform: scale(0.95);
 }
 
